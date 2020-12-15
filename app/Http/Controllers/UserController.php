@@ -11,7 +11,7 @@ class UserController extends Controller
     public function index(Request $request)
     {
         $result = User::all();
-        return response($result);
+        return $this->responseJSEND('success', 200, $result);
     }
 
     public function view(Request $request, string $user)
