@@ -17,8 +17,8 @@ class Controller extends BaseController
     {
         $response = [
             'status ' => $status,
-            'data' => $data,
         ];
+        $data ? $response['data'] = $data : null;
         $message ? $response['message'] = $message : null;
 
         return response()->json(

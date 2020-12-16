@@ -34,4 +34,10 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         'token',
         'device'
     ];
+
+    # One to Many
+    public function phones()
+    {
+        return $this->hasMany(Phone::class);
+    }
 }
