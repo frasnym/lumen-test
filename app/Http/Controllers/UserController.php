@@ -25,5 +25,10 @@ class UserController extends Controller
 
     public function view(Request $request, string $user)
     {
+        $users = User::find($user);
+        if ($users) {
+            return $this->responseJSEND('success', 200, $users);
+        }
+        return $this->responseJSEND('fail', 404);
     }
 }
