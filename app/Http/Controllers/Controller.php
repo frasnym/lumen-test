@@ -16,7 +16,7 @@ class Controller extends BaseController
     protected function responseJSEND($status, $code, $data = null, $message = null)
     {
         $response = [
-            'status ' => $status,
+            'status' => $status,
         ];
         $data ? $response['data'] = $data : null;
         $message ? $response['message'] = $message : null;
